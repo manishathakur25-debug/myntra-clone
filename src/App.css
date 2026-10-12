@@ -510,3 +510,258 @@ body {
     height: 180px;
   }
 }
+
+
+.menProducts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 300px));
+  justify-content: center;
+  gap: 25px;
+  padding: 30px 20px;
+  margin: 0;
+}
+
+.menProducts > div {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.menImg {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  box-sizing: border-box;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .menProducts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .menImg {
+    height: 220px;
+  }
+}
+
+@media (max-width: 450px) {
+  .menProducts {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* ===== PRODUCT LAYOUT ===== */
+.dresses,
+.menProducts,
+.frontProducts {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 240px), 270px)
+  );
+  justify-content: center;
+  align-items: start;
+  gap: 32px;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 35px 40px;
+}
+
+/* ===== PRODUCT CARDS ===== */
+.product,
+.frontProduct,
+.menProducts > div,
+.dresses > div {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* ===== PRODUCT IMAGES ===== */
+.dressImg,
+.frontProduct .dressImg,
+.menImg {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: contain;
+  box-sizing: border-box;
+}
+
+/* Men product image */
+.menImg {
+  background-color: lightcyan;
+  border-radius: 10px;
+}
+
+/* ===== PRODUCT TEXT ===== */
+.product p,
+.frontProduct p,
+.menProducts > div p,
+.dresses > div p {
+  margin: 10px 12px;
+  font-size: 15px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* ===== PRODUCT BUTTONS ===== */
+.product button,
+.frontProduct button,
+.menProducts button,
+.dresses button,
+.menP button {
+  max-width: 100%;
+  padding: 9px 12px;
+  margin: 4px;
+  font-size: 12px;
+}
+
+/* ===== MEDIUM SCREENS ===== */
+@media (max-width: 900px) {
+  .dresses,
+  .menProducts,
+  .frontProducts {
+    grid-template-columns: repeat(2, minmax(0, 270px));
+    gap: 24px;
+    padding: 25px 20px;
+  }
+
+  .dressImg,
+  .frontProduct .dressImg,
+  .menImg {
+    height: 240px;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 580px) {
+  .dresses,
+  .menProducts,
+  .frontProducts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    padding: 14px;
+  }
+
+  .dressImg,
+  .frontProduct .dressImg,
+  .menImg {
+    height: 190px;
+  }
+
+  .product p,
+  .frontProduct p,
+  .menProducts > div p,
+  .dresses > div p {
+    margin: 7px;
+    font-size: 13px;
+  }
+}
+
+/* ===== VERY SMALL PHONES ===== */
+@media (max-width: 360px) {
+  .dresses,
+  .menProducts,
+  .frontProducts {
+    gap: 10px;
+    padding: 8px;
+  }
+
+  .dressImg,
+  .frontProduct .dressImg,
+  .menImg {
+    height: 160px;
+  }
+}
+
+
+/* Product container full width */
+.dresses,
+.menProducts,
+.frontProducts {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  justify-content: stretch;
+}
+
+/* Each product card fills its grid column */
+.product,
+.frontProduct,
+.menProducts > div,
+.dresses > div {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Product images fill the card width */
+.dressImg,
+.menImg,
+.frontProduct .dressImg {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: contain;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .dresses,
+  .menProducts,
+  .frontProducts {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    padding: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .dresses,
+  .menProducts,
+  .frontProducts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .dressImg,
+  .menImg,
+  .frontProduct .dressImg {
+    height: 200px;
+  }
+}
+
+.dresses,
+.menProducts,
+.frontProducts {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  padding: 30px;
+}
+
+.product,
+.frontProduct,
+.menProducts > div,
+.dresses > div {
+  width: 100%;
+  max-width: 450px;
+  max-height: 500px;
+  justify-self: center;
+  box-sizing: border-box;
+}
