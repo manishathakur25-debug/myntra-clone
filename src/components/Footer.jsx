@@ -1,99 +1,71 @@
-import React from 'react'
-
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
-    <>
-    <div className='footer'>
+    <footer className="footer">
+      <div className="footerTop">
+        <div className="footerBrand">
+          <p className="footerEyebrow">A FASHION EXPERIENCE</p>
+          <h2>Style, reimagined<span>.</span></h2>
+          <p>Discover your style. Define your story.</p>
+        </div>
 
-  <div className='list'>
-    <h3>Online Shopping</h3>
-    <label>Men</label>
-    <label>Women</label>
-    <label>Kids</label>
-    <label>Home</label>
-    <label>Beauty</label>
-    <label>Genz</label>
-    <label>GiftCards</label>
-    <label>Myntra Insider</label>
-  </div>
+        <div className="footerColumn">
+          <h3>EXPLORE</h3>
+          <Link to="/men">Men</Link>
+          <Link to="/women">Women</Link>
+          <Link to="/kids">Kids</Link>
+          <Link to="/beauty">Beauty</Link>
+          <Link to="/">All Products</Link>
+        </div>
 
-  <div className='policy'>
-    <h3>Customer Policies</h3>
-    <label>Contact Us</label>
-    <label>FAQ</label>
-    <label>Terms of Use</label>
-    <label>Track Order</label>
-    <label>Shipping</label>
-    <label>Cancellation</label>
-    <label>Privacy Policy</label>
-    <label>Grievance Redressal</label>
-  </div>
+        <div className="footerColumn">
+          <h3>QUICK LINKS</h3>
+          <Link to="/cart">Shopping Bag</Link>
+          <Link to="/wishlist">Wishlist</Link>
+          <Link to="/">Home</Link>
+        </div>
 
-</div>
+        <div className="footerColumn developerColumn">
+          <h3>THE DEVELOPER</h3>
+          <h2>Manisha Thakur</h2>
+          <p>Full Stack Developer in progress</p>
+          <p>Himachal Pradesh, India</p>
 
+          <div className="footerSocials">
+            <a
+              href="https://github.com/manishathakur25-debug"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub ↗
+            </a>
 
-<div className='popular'>
+            <a
+              href="https://www.linkedin.com/in/manisha-thakur-8a16353a2/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn ↗
+            </a>
+          </div>
+        </div>
+      </div>
 
-  <h3>POPULAR SEARCH</h3>
+      <div className="footerStatement">
+        <p>Designed &amp; developed with curiosity.</p>
+        <span>FASHION • CREATIVITY • CODE</span>
+      </div>
 
-  <p>
-    Makeup Dresses For Girls T-Shirts Sandals Headphones
-    Babydolls Blazers For Men Handbags Ladies Watches Bags
-    Sport Shoes Reebok Shoes Puma Shoes Boxers Wallets Tops
-    Earrings Fastrack Watches Kurtis Nike Smart Watches
-    Titan Watches Designer Blouse Gowns Rings Cricket Shoes
-    Forever 21 Eye Makeup Photo Frames Punjabi Suits Bikini
-    Myntra Fashion Show Lipstick Saree Watches Dresses Lehenga
-    Nike Shoes Goggles Bras Suit Chinos Shoes Adidas Shoes
-    Woodland Shoes Jewellery Designer Sarees
-  </p>
-
-
-  <p>
-    In case of any concern, Contact Us
-  </p>
-
-
-  <p>
-    <strong>Registered Office Address</strong>
-    <br />
-    Buildings Alyssa,
-    <br />
-    Begonia and Clover situated in Embassy Tech Village,
-    <br />
-    Outer Ring Road,
-    <br />
-    Devarabeesanahalli Village,
-    <br />
-    Varthur Hobli,
-    <br />
-    Bengaluru – 560103, India
-    <br />
-    CIN: U72300KA2007PTC041799
-    <br />
-    Telephone: 080-40011450
-  </p>
-
-
-  <section>
-    <h2>MYNTRA APP</h2>
-
-    <p>
-      Myntra is one of India's popular online fashion shopping platforms.
-      The Myntra app provides a convenient way to shop for fashion,
-      beauty and lifestyle products.
-    </p>
-
-    <p>
-      Myntra Insider also provides members with special benefits,
-      offers and early access to sales.
-    </p>
-  </section>
-
-</div>
-    </>
-  )
+      <div className="footerBottom">
+        <p>© 2026 Manisha Thakur. Portfolio project.</p>
+        <a href="https://github.com/manishathakur25-debug">
+          Built with React ↗
+        </a>
+      </div>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;
