@@ -78,6 +78,44 @@ function Carts({ search = '' }) {
 
   return (
     <>
+
+<section className="fashionHero">
+  <div className="heroContent">
+    <p className="heroEyebrow">YOUR STYLE, YOUR STORY</p>
+
+    <h1>
+      Discover Your
+      <span> Everyday Style</span>
+    </h1>
+
+    <p className="heroDescription">
+      Explore fresh fashion, timeless essentials and styles
+      that feel uniquely you.
+    </p>
+
+    <a href="#shopProducts" className="heroButton">
+      Explore Collection <span>→</span>
+    </a>
+
+    <div className="heroHighlights">
+      <span>✦ Everyday fashion</span>
+      <span>✦ New-season styles</span>
+    </div>
+  </div>
+
+  <div className="heroImageWrap">
+    <img
+      src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=85"
+      alt="Fashion collection"
+      className="heroImage"
+    />
+    <div className="heroImageNote">
+      <span>STYLE EDIT</span>
+      <strong>Find your next favourite.</strong>
+    </div>
+  </div>
+</section>
+
       <Product product="https://cdn.growthjockey.com/blogs/myntra-seller-registration.webp" />
 
       <Product product="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToIjNyysfAgzUALd4xOiJZSL2i7CRUPPTnA5UDBOugzPw9fqgFlN0bIj8&s=10" />
@@ -87,7 +125,7 @@ function Carts({ search = '' }) {
         <span>Cart total: {formatPrice(totalAmount)}</span>
       </section>
 
-      <div className="dresses">
+      <div className="dresses" id="shopProducts" >
         {filterProducts.map((item) => {
           const quantity =
             cart.find((cartItem) => cartItem.id === item.id)?.quantity || 0;

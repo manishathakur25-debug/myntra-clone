@@ -107,14 +107,21 @@ function CartPage() {
             <strong>{formatPrice(totalAmount)}</strong>
           </div>
 
-          <button
-            className="checkoutButton"
-            onClick={() =>
-              alert('Demo checkout! No real payment was made.')
-            }
-          >
-            Place Order
-          </button>
+<button
+  className="checkoutButton"
+  disabled={cart.length === 0}
+  onClick={() => {
+    if (cart.length === 0) {
+      alert('Your shopping bag is empty!');
+      return;
+    }
+
+    alert('Demo checkout! No real payment was made.');
+  }}
+>
+  Place Order
+</button>
+
         </aside>
       </div>
     </section>
@@ -122,3 +129,5 @@ function CartPage() {
 }
 
 export default CartPage;
+
+
